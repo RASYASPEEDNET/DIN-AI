@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dinns AI Chat</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <span>🤖 Asisten Dinns AI</span>
+    <button onclick="clearChat()">🗑️ Clear</button>
+  </header>
+
+  <div id="chat"></div>
+
+  <!-- tombol stop -->
+  <div id="stopContainer">
+    <button id="stopBtn">⏹ Stop</button>
+  </div>
+
+  <!-- input box -->
+  <div id="inputBox">
+    <input type="text" id="input" placeholder="Tulis pertanyaan..." />
+    <label onclick="toggleMenu()">📎</label>
+    <button id="sendBtn">Kirim</button>
+
+    <!-- Menu upload -->
+    <div id="uploadMenu">
+      <button onclick="openCamera()">📷 Kamera</button>
+      <button onclick="openGallery()">🖼️ Foto</button>
+      <button onclick="openFile()">📂 File</button>
+    </div>
+
+    <!-- Input file tersembunyi -->
+    <input type="file" id="cameraInput" accept="image/*" capture="camera">
+    <input type="file" id="galleryInput" accept="image/*">
+    <input type="file" id="fileInput">
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
